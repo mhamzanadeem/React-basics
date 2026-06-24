@@ -2,7 +2,7 @@ import React from 'react'
 import TaskItem from './TaskItem.jsx'
 
 // TaskList: renders list or empty state conditionally
-export default function TaskList({ tasks, toggleTask, deleteTask }) {
+export default function TaskList({ tasks, toggleTask, deleteTask, updateTask }) {
   return (
     <section className="task-list">
       {/* Conditional rendering: show empty message when no tasks */}
@@ -12,7 +12,13 @@ export default function TaskList({ tasks, toggleTask, deleteTask }) {
         <ul>
           {/* List rendering with unique keys */}
           {tasks.map((task) => (
-            <TaskItem key={task.id} task={task} toggleTask={toggleTask} deleteTask={deleteTask} />
+            <TaskItem
+              key={task.id}
+              task={task}
+              toggleTask={toggleTask}
+              deleteTask={deleteTask}
+              updateTask={updateTask}
+            />
           ))}
         </ul>
       )}

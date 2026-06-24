@@ -47,6 +47,12 @@ export default function App() {
     setTasks((prev) => prev.filter(t => t.id !== id))
   }
 
+  // Update task text
+  const updateTask = (id, newText) => {
+    if (!newText || !newText.trim()) return
+    setTasks((prev) => prev.map(t => t.id === id ? { ...t, text: newText.trim() } : t))
+  }
+
   return (
     <div className="app-container">
       <header>
@@ -66,7 +72,7 @@ export default function App() {
         />
 
         {/* TaskList receives tasks and callbacks for item actions */}
-        <TaskList tasks={tasks} toggleTask={toggleTask} deleteTask={deleteTask} />
+        <TaskList tasks={tasks} toggleTask={toggleTask} deleteTask={deleteTask} updateTask={updateTask} />
       </main>
     </div>
   )
