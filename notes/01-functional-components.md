@@ -1,16 +1,16 @@
 # Functional Components
 
-Definition
+## Definition
 
 Functional components are JavaScript functions that return React elements (JSX). They are the modern standard for building React UI and can use hooks like `useState` and `useEffect`.
 
-Why it is used
+## Why it is used
 
 - Simpler syntax than class components
 - Easier to test and reason about
 - Hooks provide powerful features without classes
 
-Syntax
+## Syntax
 
 ```js
 function MyComponent(props) {
@@ -18,23 +18,23 @@ function MyComponent(props) {
 }
 ```
 
-Examples
+## Examples
 
 ```js
 const Greeting = ({ name }) => <h1>Hello {name}</h1>
 ```
 
-Common mistakes
+## Common mistakes
 
 - Trying to use lifecycle methods (like componentDidMount) directly — use `useEffect` instead
 - Mutating props directly
 
-Interview Questions
+## Interview Questions
 
 - What are functional components?
 - How do hooks replace lifecycle methods?
 
-Best Practices
+## Best Practices
 
 - Keep components small and focused
 - Use descriptive names

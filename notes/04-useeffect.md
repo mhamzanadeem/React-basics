@@ -1,14 +1,14 @@
 # useEffect
 
-Definition
+## Definition
 
 `useEffect` is a hook for running side-effects (data fetching, subscriptions, localStorage) in functional components.
 
-Why it is used
+## Why it is used
 
 - To perform work after render and to manage lifecycles like mount/unmount/update
 
-Syntax
+## Syntax
 
 ```js
 useEffect(() => {
@@ -19,7 +19,7 @@ useEffect(() => {
 }, [dependencies])
 ```
 
-Examples
+## Examples
 
 - Persisting to localStorage:
 
@@ -29,17 +29,17 @@ useEffect(() => {
 }, [tasks])
 ```
 
-Common mistakes
+## Common mistakes
 
 - Forgetting dependency array leading to repeated effects
 - Using effects for logic that belongs in render
 
-Interview Questions
+## Interview Questions
 
 - When does an effect run if the dependency array is empty?
 - How do you perform cleanup in useEffect?
 
-Best Practices
+## Best Practices
 
 - Declare dependencies explicitly
 - Keep effects focused and small

@@ -1,15 +1,15 @@
 # Props
 
-Definition
+## Definition
 
 Props (properties) are the way parent components pass data and callbacks to child components in React.
 
-Why it is used
+## Why it is used
 
 - To allow component composition
 - To make components reusable and configurable
 
-Syntax
+## Syntax
 
 ```js
 function Child({ value, onClick }) {
@@ -21,22 +21,22 @@ function Parent(){
 }
 ```
 
-Examples
+## Examples
 
 - Passing data: `<TaskList tasks={tasks} />`
 - Passing callbacks: `<TaskForm addTask={addTask} />`
 
-Common mistakes
+## Common mistakes
 
 - Mutating props inside the child
 - Forgetting to pass required callbacks
 
-Interview Questions
+## Interview Questions
 
 - How do props differ from state?
 - How do you pass functions as props?
 
-Best Practices
+## Best Practices
 
 - Use prop names that indicate intent
 - Keep props minimal — prefer composition
