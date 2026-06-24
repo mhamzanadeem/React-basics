@@ -47,7 +47,7 @@ export default function App() {
     setTasks((prev) => prev.filter(t => t.id !== id))
   }
 
-  // Update task text
+  // Update task text in it
   const updateTask = (id, newText) => {
     if (!newText || !newText.trim()) return
     setTasks((prev) => prev.map(t => t.id === id ? { ...t, text: newText.trim() } : t))
